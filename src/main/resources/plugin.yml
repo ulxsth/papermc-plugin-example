@@ -1,0 +1,4 @@
+name: Example
+version: '${version}'
+main: io.github.ulxsth.example.Example
+api-version: 1.19
