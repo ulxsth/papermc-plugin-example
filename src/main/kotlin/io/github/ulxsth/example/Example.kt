@@ -5,6 +5,6 @@ import org.bukkit.event.Listener
 
 class Example : JavaPlugin(), Listener {
     override fun onEnable() {
-        this.getServer().getPluginManager().registerEvents(this, this)
+        this.server.pluginManager.registerEvents(this, this)
     }
 }
