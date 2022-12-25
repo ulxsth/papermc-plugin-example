@@ -1,9 +1,10 @@
-plugins {
+ plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.8.0-RC'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0-RC2'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
-group = 'io.github.ulxsth'
+group = 'io.github.yotu'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -19,8 +20,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:1.19.3-R0.1-SNAPSHOT'
+    compileOnly 'io.papermc.paper:paper-api:1.19.2-R0.1-SNAPSHOT'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
 }
 
 def targetJavaVersion = 17
@@ -57,3 +59,5 @@ compileTestKotlin {
         jvmTarget = "1.8"
     }
 }
+
+build.dependsOn shadowJar
